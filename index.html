@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset = "UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> URLnet </title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+    <div class="popup" id="popup">
+        <h1> THANK YOU </h1>
+        <button type="button" onclick="closePopup()"> ok </button>
+     </div>
+   <div class="Name">
+        <div class="LOGO">
+            <a href="https://vuthiminhthu2004.github.io/About-Us/" target="_blank" title="About Us"><img src="LOGO_UR.png" alt="URLnet"></a>
+        </div>
+        <div class="Search">
+
+            <input type="text" placeholder="Check URL here">   <br>
+      
+            <button type="submit" onclick="openPopup()">SUBMIT</button>
+        </div>
+        <img src="demo-022.png">
+    </div>
+    <div class="Backg">
+        <div class="backg-item p-item1" ></div>
+        <!--<div class="backg-item p-item7"></div>-->
+        <img class="backg-item" src="Ground-01.png">
+        <div class="backg-item p-item2 translateX" data-speed="-0.5" > </div>
+        <div class="backg-item p-item3 p-item2 translateX" data-speed="0.5"></div>
+        <div class="backg-item p-item4 translateX" data-speed="-0.25"></div>
+        <div class="backg-item p-item5 translateX" data-speed="0.25"></div>
+        <div class="backg-item p-item6 translateY" data-speed="-0.25"></div>
+        
+    </div>
+ <!-- <img src="sea-01.png" id="sea">
+        <img src="Fish1-01.png" id="fish1">
+        <img src="Fish2-01.png" id="fish2">
+        <img src="Moutain1-01.png" id="moutain1">
+        <img src="moutain2-01.png" id="moutain2">
+        <img src="Bubble-01.png" >
+       <div class="Backg">
+        <div class="backg-item p-item1"></div>
+    </div>
+    <section class="hero">
+        <img src="Fish1-01.png" class="translateX" data-speed="-0.5" id="fish1" alt="">
+        <img src="Fish2-01.png" class="translateX" data-speed="0.5" id="fish2" alt="">
+        <img src="moutain2-01.png" class="translateX" data-speed="0.2" id="moutain2" alt="">
+        <img src="Moutain1-01.png" class="translateX" data-speed="-0.2" id="moutain1" alt="">
+        <h1 id="text" class="translateY" data-speed="-3">Discover New Horizons</h1>
+        <a href="#" id="btn">Explore</a>
+      </section>-->
+      <script>
+        const translateX = document.querySelectorAll(".translateX");
+        const translateY = document.querySelectorAll(".translateY");
+        window.addEventListener("scroll" ,() => {
+            let scroll = window.pageYOffset;
+            translateX.forEach(element => {
+            let speed = element.dataset.speed;
+            element.style.transform = `translateX(${scroll * speed}px)`;
+            })
+            translateY.forEach(element => {
+            let speed = element.dataset.speed;
+            element.style.transform = `translateY(${scroll * speed}px)`;
+            })
+        })
+      </script>
+      <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
